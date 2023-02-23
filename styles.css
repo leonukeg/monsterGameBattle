@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Indie+Flower&family=Mochiy+Pop+One&display=swap');
+
+/* 
+font-family: 'Fredoka One', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Mochiy Pop One', sans-serif; 
+*/
+
+body{
+      background-color: #FEFBE9 ; 
+}  
+
+#selectSkull{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.title{
+    font-family: 'Mochiy Pop One', sans-serif;
+    color:  #b63e3f ;
+    font-size: 40px;
+}
+.subTitle{
+    font-family: 'Mochiy Pop One', sans-serif;
+    color:  #b63e3f ;
+    font-size: 21px;
+}
+
+.petCard img{
+    width: 200px;
+}
+
+.petCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 250px;
+    font-family: 'Indie Flower', cursive; 
+    padding: 10px;
+    margin: 10px;
+    color: #b63e3f;
+    border-radius: 10px; 
+}
+input{
+    display: none;
+}
+
+.card{
+    display: flex;
+    gap: 10px;
+}
+
+#selectAttack{
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnAttack{
+    background-color: #ff842b;
+    border: none;
+    border-radius: 25px;
+}
+
+#container_cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+#message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0a8792;
+    margin: 10px;
+    border-radius: 25px;
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+
+.jugador, .enemigo{
+    background-color: #272727;
+    margin: 10px;
+    border-radius: 25px;
+    color:  #b63e3f ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ataque_enemigo, .ataque_jugador, #result{
+    font-family: 'Mochiy Pop One', sans-serif;
+    background-color: #ff842b;
+    color: #272727;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#result{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.ataque_enemigo p, .ataque_jugador p {
+    margin: 10px;
+}
+
+.vidas_jugador, .vidas_enemigo {
+    font-family: 'Mochiy Pop One', sans-serif;
+    background-color: #0a8792;
+    color: #272727;
+    border-radius: 25px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablero{
+    border-radius: 25px;
+    display: grid;
+    background-color: #ff842b;
+    grid-template-columns: 200px 150px 200px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.mascota_jugador, .mascota_enemigo{
+    font-family: 'Indie Flower', cursive; 
+}
+
+#btnRestar{
+    background-color: #b63e3f;
+    border: none;
+    border-radius: 25px;
+    color: #ff842b;
+    width: 9vw;
+    height: 4vh;
+}
+
+
