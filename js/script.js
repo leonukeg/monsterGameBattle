@@ -13,6 +13,7 @@ const spanPlayerLives = document.getElementById('lives-player')
 const spanEnemyLives = document.getElementById('lives-enemy')
 const containerCards = document.getElementById('container_cards')
 const containerAttacks = document.getElementById('container_Attacks')
+const imagenPlayer = document.getElementById('img_player')
 
 sectionRestar.style.display = 'none'
 
@@ -120,11 +121,12 @@ function starGame(){
 
     mosters.forEach((moster) => {
         optionMosters = ` 
+        <input type="radio" name="skull" id=${moster.name}>
         <label class="petCard" for=${moster.name}>
             <img src=${moster.img} alt=${moster.name}>
             <p>${moster.name}</p>
         </label>
-        <input type="radio" name="skull" id=${moster.name}>
+        
         `
         containerCards.innerHTML += optionMosters
 
@@ -182,6 +184,11 @@ function extractAttacks(playerPet){
     showAttacks(ataques)
 }
 
+function imgJugador(moster){
+    playerDos = `<img src=${moster.img} alt=${moster.name}>`
+    imagenPlayer.innerHTML = playerDos
+}
+
 function showAttacks(ataques){
     ataques.forEach((attacks) => {
         ataquesMoster =`<button id=${attacks.id} class="btnAttack BAtaque">${attacks.nombre}</button>`
@@ -228,6 +235,7 @@ function secuenciaAtaque(){
             enemyRandomAttack()
         })
     })
+    
 }
 function selectEnemySkull(){
     let attackEnemy = random(0, mosters.length-1)
@@ -247,7 +255,7 @@ function enemyRandomAttack(){
         attackEnemy.push('Phishing')
     }else if(aux == 3){
         attackEnemy.push('Spyware')
-    }else if(aux == 4){
+    }else{
         attackEnemy.push('Spear')
     }
     
